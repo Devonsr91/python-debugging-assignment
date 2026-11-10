@@ -1,0 +1,77 @@
+# Pre-Work Section C — Python Fundamentals
+## Part 1: Bug Analysis
+
+**Bug 1: Missing colon after function definition**
+- Error type: SyntaxError
+- Fix: Added a colon after `def calculate_stats(numbers):`
+- Found by: Myself.
+
+**Bug 2: Missing colon after if statement**
+- Error type: SyntaxError
+- Fix: Added a colon after `if num > average:`
+- Found by: Myself.
+
+**Bug 3: Score stored as a string**
+- Error type: TypeError
+- Fix: Removed quotation marks around 70 so Python could calculate the scores.
+- Found by: AI assistance.
+
+**Bug 4: Incorrect dictionary key**
+- Error type: NameError
+- Fix: Changed `result[average]` to `result['average']`.
+- Found by: AI assistance.
+
+## Part 2: AI Code Improvement
+
+**Project Used:** Grade Analyzer
+
+### Question 1: How can I make this code more Pythonic?
+
+AI suggestions:
+- Use collections.Counter to count letter grades.
+- Use constants instead of repeating numbers.
+- Reduce reliance on global variables.
+
+Evaluation:
+I decided to implement constants because they make the code easier to maintain and update. I did not implement every suggestion because my existing code was already readable and functional.
+
+### Question 2: What edge cases am I not handling?
+
+AI identified:
+- Empty score lists.
+- Scores below zero.
+- Scores above 100.
+- Decimal inputs.
+- Invalid text input.
+
+Evaluation:
+My program already handled invalid text and scores outside the allowed range. I added empty-list protection to prevent division by zero.
+
+### Question 3: Are there any security or reliability concerns?
+
+AI identified:
+- Reliance on a global scores list.
+- The importance of validating user input.
+- The need to protect calculations against empty lists.
+
+Evaluation:
+I kept the existing input validation and added protection against empty score lists. There were no major security concerns because the program does not execute user input as code.
+
+### Improvements Implemented
+1. Added MIN_SCORE, MAX_SCORE, and PASSING_SCORE constants.
+2. Updated the passing score calculation to use PASSING_SCORE.
+3. Updated input validation to use MIN_SCORE and MAX_SCORE.
+4. Added empty-list protection to show_results().
+
+### Testing Results
+
+- Ran the Grade Analyzer successfully.
+- Tested a valid score of 85.
+- Tested an invalid score of 150.
+- Tested invalid text input.
+- Tested the done command.
+- Confirmed the program ran without errors.
+
+**Conclusion:**
+
+I used AI to help identify bugs, evaluate improvements, and make my Python code more reliable. I reviewed the suggestions and implemented changes that improved readability and error handling.
